@@ -1,0 +1,25 @@
+<div ng-transclude></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Producer</th>
+            <th>Available</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in products">
+            <td><a ng-href="./index.html#/productdetail">{{product.model}}</a></td>
+            <td>{{product.year}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.producer}}</td>
+            <td><i class="glyphicon glyphicon-plus btn btn-sm btn-success" ng-click="changeAvailable(product, 'inc')"></i>
+                <div>{{product.available}}</div>
+	<i <td><i class="glyphicon glyphicon-minus btn btn-sm btn-warning" ng-click="changeAvailable(product, 'desc')"></i></td>
+            <td><i class="glyphicon glyphicon-trash btn btn-danger" ng-click="remove(mobile)"></i></td>
+        </tr>
+    </tbody>
+</table>
