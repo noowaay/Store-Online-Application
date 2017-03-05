@@ -58,6 +58,10 @@ public class ProductService {
 		PRODUCT_LIST.put(product.getId(), product);
 	}
 	
+	public void removeProduct(long id) {
+		PRODUCT_LIST.remove(id);
+	}
+	
 	public Product getProduct(long id) {
 		return PRODUCT_LIST.get(id);
 	}

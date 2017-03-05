@@ -3,44 +3,24 @@ var app = angular.module('myApp');
 // product list
 app.controller('MainStoreController', function($scope, $http, storeService) {
 
-	$scope.product = {
-		id : "",
-		name : "",
-		model : "",
-		year : "",
-		producer : "",
-		available : ""
-	};
-
-	$scope.products;
-
 	$scope.getAllData = function() {
 		$http.get('http://localhost:9000/fresherangular/product/list').then(
 				onComplete, onError);
 	}
 
 	function onComplete(response) {
-		$scope.products = {};
 		$scope.products = response.data;
 	}
 	function onError(response) {
 		$scope.products = 'Error';
 	}
 
-	$scope.changeAvailable = function(product, temp) {
-		if (temp == 'inc')
-			product.available = parseInt(product.available) + 1;
-		if (temp == 'desc' && product.available > 0)
-			product.available = parseInt(product.available) - 1;
-	}
-
-	$scope.remove = function(product) {
-		var check = confirm("Delete! Are you sure?");
-		if (check)
-			$scope.products.splice($scope.products.indexOf(product), 1);
+	$scope.removeProduct = function(id) {
+		storeService.removeProduct1(id);
+		$scope.getAllData();
 	}
 	
-	$scope.addProduct1 = function() {
+	$scope.addProduct = function() {
 		$scope.product = {
 				id : "",
 				name:$scope.model, 
@@ -51,7 +31,18 @@ app.controller('MainStoreController', function($scope, $http, storeService) {
 				available:$scope.available
 			};
 		console.log($scope.product);
-		storeService.addProduct($scope.product);
+		storeService.addProduct1($scope.product);
+		$scope.getAllData();
+	}
+	
+	$scope.increaseAvailable = function(id) {
+		storeService.incAvailable(id);
+		$scope.getAllData();
+	}
+	
+	$scope.decreaseAvailable = function(id) {
+		storeService.decAvailable(id);
+		$scope.getAllData();
 	}
 });
 

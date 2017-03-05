@@ -34,6 +34,11 @@ public class ProductController {
 		service.addProduct(product);
 	}
 	
+	@RequestMapping("/product/remove/{id}")
+	public void removeProduct(@PathVariable long id) {
+		service.removeProduct(id);
+	}
+	
 	@RequestMapping("/product/get/{id}")
 	public Product getProduct(@PathVariable long id) {
 		return service.getProduct(id);
