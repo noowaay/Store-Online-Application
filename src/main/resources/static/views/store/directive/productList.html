@@ -14,10 +14,10 @@
         <tr ng-repeat="product in products">
            	<td ><a ng-href="#/productdetail/{{product.id}}">{{product.model}}</a></td>
             <td>{{product.year}}</td>
-            <td>{{product.price}}</td>
+            <td>{{product.price | currency}}</td>
             <td>{{product.producer}}</td>
             <td><i class="glyphicon glyphicon-plus btn btn-sm btn-success" ng-click="increaseAvailable(product.id)"></i>
-                <div class="product-available">{{product.available}}</div>
+                <div class="product-available">{{product.available | number}}</div>
 	<i <td><i class="glyphicon glyphicon-minus btn btn-sm btn-warning" ng-click="decreaseAvailable(product.id)"></i></td>
             <td><i class="glyphicon glyphicon-trash btn btn-danger" ng-click="removeProduct(product.id)"></i></td>
         </tr>

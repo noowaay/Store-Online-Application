@@ -11,12 +11,18 @@ app.factory('storeService', function($http) {
 			});
 	}
 	service.removeProduct1 = function(id) {
-		return $http.get('http://localhost:9000/fresherangular/product/remove/' + id)
+		var check = confirm("Delete! Are you sure?");
+		if (check) {
+			return $http.get('http://localhost:9000/fresherangular/product/remove/' + id)
 			.then(function() {
+				
+				
 				console.log("Remove product with productId = " + id);
 			}, function() {
 				console.log('error');
 			});
+		}
+		return;
 	}
 
 	service.incAvailable = function(id) {
