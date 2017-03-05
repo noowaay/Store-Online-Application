@@ -27,9 +27,9 @@ app.config(function($routeProvider){
         	  templateUrl: "/fresherangular/views/store/mainstore.html",
               controller: "MainStoreController"
           })
-          .when("/productdetail", {
+          .when("/productdetail/:productId", {
         	  templateUrl: "/fresherangular/views/store/productdetail.html",
-              controller: "MainStoreController"
+              controller: "ProductController"
           })
           //End Github Service example
         .otherwise(

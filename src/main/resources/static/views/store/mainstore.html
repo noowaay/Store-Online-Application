@@ -1,40 +1,38 @@
 <div class="container">
     <h2>Add new product</h2>
-    <form class="css-form" method="post" ng-submit="addProduct()">
+    <form role="form" class="css-form" method="POST" ng-submit="addProduct1()">
     	<div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" ng-model="product.name" ng-required="true">
+            <input type="text" class="form-control" id="name" ng-model="name" ng-required="true">
         </div>
         <div class="form-group">
             <label for="model">Model:</label>
-            <input type="text" class="form-control" id="model" ng-model="product.model" ng-required="true">
+            <input type="text" class="form-control" id="model" ng-model="model" ng-required="true">
         </div>
         <div class="form-group">
             <label for="year">Year:</label>
-            <input type="text" class="form-control" id="year" name="uYear" ng-model="product.year" ng-required="true">
+            <input type="text" class="form-control" id="year" name="uYear" ng-model="year" ng-required="true">
         </div>
         <div class="form-group">
             <label for="price">Price:</label>
-            <input type="text" class="form-control" id="price" ng-model="product.price">
+            <input type="text" class="form-control" id="price" ng-model="price">
         </div>
         <div class="form-group">
             <label for="producer">Producer:</label>
-            <input type="text" class="form-control" id="producer" ng-model="product.producer">
+            <input type="text" class="form-control" id="producer" ng-model="producer">
         </div>
         <div class="form-group">
             <label for="available">Available:</label>
-            <input type="number" class="form-control" id="available" ng-model="product.available">
+            <input type="number" class="form-control" id="available" ng-model="available">
         </div>
-        <button type="submit" class="btn btn-default">Add</button>
+        <button type="submit" class="btn btn-default">Add Product</button>
         
-    	<button type="button" class="btn btn-default" ng-click="getAllData()">Show All</button>
+    	<button type="button" class="btn btn-default" ng-click="getAllData()">Search All</button>
     </form>
 </div>
 <div class="container">
     <h2>Product List</h2>
-    <my-list element="product" list="products">
-    	transclude {{name}}
-    </my-list>
+    <product-list element="product" list="products"></product-list>
 </div>
 <br>
 <br>

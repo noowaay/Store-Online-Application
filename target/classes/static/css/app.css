@@ -13,14 +13,27 @@
 	float: left;
 }
 
+.container {
+	float: right;
+}
+
 .photo {
 	padding-right: 5px;
 }
 
+.title {
+	align-text: center;
+}
+
+/* MainStore */
 .css-form input.ng-invalid.ng-dirty {
 	background-color: #FA787E;
 }
 
 .css-form input.ng-valid.ng-dirty {
 	background-color: #78FA89;
+}
+
+.product-available {
+	display: inline;
 }

@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="/fresherangular/css/app.css">
 </head>
 <body>
-<h2>Administrator Panel</h2>
+<h1 class="title">Administrator Panel</h1>
 <div class="home-section">
     <ul class="menu-list">
         <li><a href="#/users">Users</a></li>
         <li><a href="#/roles">Roles</a></li>
         <li><a href="#/main">Github Service example</a></li>
+        <li><a href="#/mainstore">Store Online Application</a></li>
     </ul>
 </div>
 <div ng-view></div>
@@ -28,12 +29,14 @@
 <script src="/fresherangular/js/app.js"></script>
 
 <script src="/fresherangular/js/service/githubService.js"></script>
+<script src="/fresherangular/js/service/store/storeService.js"></script>
 
 <script src="/fresherangular/js/controller/controller.js"></script>
 <script src="/fresherangular/js/controller/MainController.js"></script>
 <script src="/fresherangular/js/controller/RepoController.js"></script>
 <script src="/fresherangular/js/controller/UserController.js"></script>
 <script src="/fresherangular/js/controller/store/MainStoreController.js"></script>
+<script src="/fresherangular/js/controller/store/ProductController.js"></script>
 
 <link rel="stylesheet" href="/fresherangular/css/bootstrap.css">
 <link rel="stylesheet" href="/fresherangular/css/bootstrap.min.css">

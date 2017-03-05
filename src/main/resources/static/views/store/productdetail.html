@@ -1,16 +1,46 @@
 <div class="container">
 	<h2>Product Detail</h2>
-	<label for="name">Name</label>
-	<p></p>
-	<label for="model">Model:</label>
-	<p></p>
-	<label for="year">Year:</label>
-	<p></p>
-	<label for="price">Price:</label>
-	<p></p>
-	<label for="producer">Producer:</label>
-	<p></p>
-	<label for="available">Available:</label>
-	<p></p>
-	<button type="button" class="btn btn-primary">Back to Main Store</button>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="name">Name:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.name}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="model">Model:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.model}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="year">Year:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.year}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="price">Price:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.price}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="producer">Producer:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.producer}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="available">Available:</label>
+		</div>
+		<div class="col-sm-4"><label>{{productDetail.available}}</label></div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-4">
+			<a href="#/mainstore" role="button" class="btn btn-primary">Back
+				to Main Store</a>
+		</div>
+	</div>
 </div>
